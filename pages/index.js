@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FormComponent } from "../components/FormComponent";
 import Script from "next/script";
-import { Analytics } from '@vercel/analytics/react';
 
 
 export function PaddleLoaderPB({ vendorID, onLoaded }) {
@@ -20,16 +19,6 @@ export function PaddleLoaderPB({ vendorID, onLoaded }) {
 }
 
 export default function IndexPage() {
-
-  async function fetchUserIP() {
-    try {
-      const response = await fetch("https://api.ipify.org?format=json");
-      const data = await response.json();
-      console.log(data.ip);
-    } catch (error) {
-      console.log("Error fetching IP address:", error);
-    }
-  }
 
   fetchUserIP();
   const [vendorID, setVendorID] = useState(null);
@@ -51,7 +40,6 @@ export default function IndexPage() {
 
   return (
     <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-600 py-6 sm:py-12 p-10 tex-white">
-      <Analytics />
       <div className="text-3xl font-bold text-white">Use this page to create test checkout data in your sandbox account</div>
       <h3 className="text-white">Email warning:</h3>
       <p className="text-white">When testing, be aware that any subsciption you set up that unless cancelled you will get email receipts for and renewal emails for.</p>
