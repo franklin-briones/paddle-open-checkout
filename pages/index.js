@@ -20,7 +20,6 @@ export function PaddleLoaderPB({ vendorID, onLoaded }) {
 
 export default function IndexPage() {
 
-  fetchUserIP();
   const [vendorID, setVendorID] = useState(null);
   const [priceIDs, setPriceIDs] = useState(null);
   const [quantities, setQuantities] = useState(null);
