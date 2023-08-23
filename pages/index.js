@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FormComponent } from "../components/FormComponent";
 import Script from "next/script";
+import { Analytics } from '@vercel/analytics/react';
+
 
 export function PaddleLoaderPB({ vendorID, onLoaded }) {
   return (
