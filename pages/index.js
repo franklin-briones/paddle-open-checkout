@@ -41,12 +41,15 @@ export default function IndexPage() {
       <h3 className="text-white">Email warning:</h3>
       <p className="text-white">When testing, be aware that any subsciption you set up that unless cancelled you will get email receipts for and renewal emails for.</p>
       <p className="text-white">I suggest using a test email that will go nowhere such as myName.test@paddle.com</p>
+      <p className="text-white">If you run into any issues, refresh the page and try again, the checkout won't re-load unless the entire page is refreshed</p>
       <br />
+      <p className="text-white">Lastly, most price IDs have a defauly quantity max of 100, so you'lll likely see an error if you enter a quantity greater than 100</p>
+
       <br />
       <p className="text-white">Please have the following values handy:</p>
       <ol>
-        <li className="text-white">Your seller ID: a 5 digit number that corresponds to your sandbox account that you can find under Developer Tools → Authentication</li>
-        <li className="text-white">Any priceIDs you'd like to pass to the checkout, these are created for each product</li>
+        <li className="text-white">Your seller ID: a 5 digit number that corresponds to your sandbox account that you can find under Developer Tools → Authentication. Or click <a className="underline" href="https://sandbox-vendors.paddle.com/authentication" target="_blank">here</a></li>
+        <li className="text-white">Any priceIDs you'd like to pass to the checkout, these are created for each product. Find your products <a className="underline" href="https://sandbox-vendors.paddle.com/products-v2" target="_blank">here</a></li>
         <li className="text-white">Any corresponding quantities for each priceID, please make sure that this quantity corresponds to any quantity limits you set on its respective priceID</li>
       </ol>
        <FormComponent onSubmit={handleSubmit} />
