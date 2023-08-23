@@ -51,6 +51,7 @@ export default function IndexPage() {
 
   return (
     <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-600 py-6 sm:py-12 p-10 tex-white">
+      <Analytics />
       <div className="text-3xl font-bold text-white">Use this page to create test checkout data in your sandbox account</div>
       <h3 className="text-white">Email warning:</h3>
       <p className="text-white">When testing, be aware that any subsciption you set up that unless cancelled you will get email receipts for and renewal emails for.</p>
