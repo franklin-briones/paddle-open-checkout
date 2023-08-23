@@ -18,6 +18,18 @@ export function PaddleLoaderPB({ vendorID, onLoaded }) {
 }
 
 export default function IndexPage() {
+
+  async function fetchUserIP() {
+    try {
+      const response = await fetch("https://api.ipify.org?format=json");
+      const data = await response.json();
+      console.log(data.ip);
+    } catch (error) {
+      console.log("Error fetching IP address:", error);
+    }
+  }
+
+  fetchUserIP();
   const [vendorID, setVendorID] = useState(null);
   const [priceIDs, setPriceIDs] = useState(null);
   const [quantities, setQuantities] = useState(null);
