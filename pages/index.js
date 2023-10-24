@@ -10,7 +10,10 @@ export function PaddleLoaderPB({ vendorID, onLoaded }) {
       onLoad={() => {
         Paddle.Environment.set("sandbox");
         Paddle.Setup({
-          seller: Number(vendorID)
+          seller: Number(vendorID),
+          eventCallback: function(data) {
+            console.log(data);
+          }
         });
         onLoaded(); // Notify that the script is loaded
       }}
